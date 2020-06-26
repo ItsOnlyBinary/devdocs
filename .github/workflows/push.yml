@@ -27,7 +27,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.1.2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "--verbose --recursive --times --compress --delete-after"
+        ARGS: "-zz --verbose --recursive --times --delete-after"
         SOURCE: "_site/*"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
