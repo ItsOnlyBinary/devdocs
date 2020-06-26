@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-    name: Deploy to www
     runs-on: ubuntu-latest
 
     steps:
