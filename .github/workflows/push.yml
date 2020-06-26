@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-
+    name: Deploy to www
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
     - name: Run build
       run: bundle exec jekyll b --config _config-prod.yml
       
-    - name: Deploy
+    - name: Deploy via rsync
       uses: easingthemes/ssh-deploy@v2.1.2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
